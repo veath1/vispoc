@@ -1,5 +1,16 @@
 # Visual Studio Remote Code Execution Vulnerability
 
+- [Environment](#environment)
+	- [OS](#os)
+	- [Visual Studio Version](#visual-studio-version)
+	- [Target](#target)
+- [devenv.exe Functional analysis](#devenvexe-functional-analysis)
+- [Vulnerable 1. Arbitrary Code Execution](#vulnerable-1-arbitrary-code-execution)
+- [Case 1. ".NET deskop development" environment is installed.](#case-1-net-deskop-development-environment-is-installed)
+- [Case 2. If the development environment is in a different version from the project settings. Alternatively, .NET Desktop Development is not installed.](#case-2-if-the-development-environment-is-in-a-different-version-from-the-project-settings-alternatively-net-desktop-development-is-not-installed)
+- [Case 3. Git clone repo](#case-3-git-clone-repo)
+
+
 ## environment
 ### OS
 - Windows 10(x64) 21h2 19044.2486(case1)
@@ -18,14 +29,14 @@
 - When a typical user double-clicks .sin, the command is executed and ide is executed as follows.
 	- "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe" "C:\Users\user\Downloads\poc\Crassus.sln"
 
-![dt](.\img\dt.png)
+![dt](./img/dt.png)
 
 ## vulnerable 1. Arbitrary Code Execution
 
 - When you use Process monitor to check the logs that appear as the project runs, if there is a program named "git.exe" in the folder where the project file (.sin) is located, run it in devenv.exe.
 
 
-![dt](.\img\devenv.png)
+![dt](./img/devenv.png)
 
 ### details
 
@@ -102,14 +113,14 @@
     			using (Process process2 = GitProofOfAccessProvider.GitExecute(repoRootPath, "remote -v"))
     ```
 
-![dt](.\img\c.png)
+![dt](./img/c.png)
 
 
-## case 1. ".NET deskop development" environment is installed.
+## Case 1. ".NET deskop development" environment is installed.
 
 - ".NET desktop development" is installed.
 
-![dt](.\img\dotnetinstalled.png)
+![dt](./img/dotnetinstalled.png)
 
 
 
