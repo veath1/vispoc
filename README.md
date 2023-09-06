@@ -149,4 +149,6 @@ https://user-images.githubusercontent.com/52561835/221816092-426b3298-47f5-460e-
 
 https://user-images.githubusercontent.com/52561835/221815903-8ac0459f-4ced-494d-b2f6-f358ffeb940e.mp4
 
+## REF
 
+- https://outflank.nl/blog/2023/03/28/attacking-visual-studio-for-initial-access/
