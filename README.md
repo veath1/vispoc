@@ -151,4 +151,5 @@ https://user-images.githubusercontent.com/52561835/221815903-8ac0459f-4ced-494d-
 
 ## REF
 
-- https://outflank.nl/blog/2023/03/28/attacking-visual-studio-for-initial-access/
+- https://outflank.nl/blog/2023/03/28/attacking-visual-studio-for-initial-access
+- https://github.com/cjm00n/EvilSln
